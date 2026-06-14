@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crunchyroll Redesign — Harmanjeet Singh</title>
+    <script>if(sessionStorage.getItem('pt-nav')){document.documentElement.style.setProperty('--pt-init','0');}</script>
+    <style>body{opacity:var(--pt-init,1);transition:none!important;}</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="casestudy.css" />
+    <link rel="stylesheet" href="transitions.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script>
+  </head>
+
+  <body data-page="case-study" data-case="crunchyroll">
+
+    <div id="cs-progress"></div>
+  <nav id="cs-toc" aria-label="Chapter index">
+  <span class="toc-header">Contents</span>
+  <a class="toc-item" href="#section-discovery" data-section="section-discovery">
+    <span class="toc-label">01 — Discovery</span>
+  </a>
+  <a class="toc-item" href="#section-insights" data-section="section-insights">
+    <span class="toc-label">02 — Insights</span>
+  </a>
+  <a class="toc-item" href="#section-design" data-section="section-design">
+    <span class="toc-label">03 — Design</span>
+  </a>
+  <a class="toc-item" href="#section-delivery" data-section="section-delivery">
+    <span class="toc-label">04 — Delivery</span>
+  </a>
+  <a class="toc-item" href="#section-results" data-section="section-results">
+    <span class="toc-label">05 — Results</span>
+  </a>
+</nav>
+    <div class="nav-grid-header-shell" id="navbarShell">
+      <nav class="navbar" id="navbar">
+
+        <a href="index.html" class="cs-back-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Back
+        </a>
+
+        <div class="desktop-menu-wrapper">
+          <span class="cs-nav-title">Crunchyroll Redesign</span>
+        </div>
+
+        <div style="width: 82px; pointer-events: none;"></div>
+
+      </nav>
+    </div>
+
+    <div class="grid-lines-wrapper">
+      <div class="grid-line left-line"></div>
+      <div class="grid-line right-line"></div>
+    </div>
+
+    <main>
+
+      <div class="cs-banner-wrap">
+        <div class="cs-banner-inner reveal-scale">
+          <img src="Images/Banner.webp" alt="Crunchyroll Redesign — Final Home Screen and Player Interface">
+        </div>
+      </div>
+
+      <div class="cs-meta-outer">
+        <div class="cs-meta-grid">
+          <div>
+            <div class="cs-meta-label">Overview</div>
+            <div class="cs-meta-value">Streamlining the viewing experience, based on 496 real Play Store reviews.</div>
+          </div>
+          <div>
+            <div class="cs-meta-label">Role</div>
+            <div class="cs-meta-value">UI/UX Designer</div>
+          </div>
+          <div>
+            <div class="cs-meta-label">Timeline &amp; Tools</div>
+            <div class="cs-meta-value">3 Weeks<br>Figma, FigJam</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider"><div class="horizontal-line"></div></div>
+
+      <section class="cs-section" id="section-discovery">
+
+        <div class="section-header reveal-up">
+          <span class="sub-heading">01 — Discovery</span>
+          <h2 class="section-title">Exploring the Problem Space</h2>
+        </div>
+
+        <div class="section-body reveal-up">
+          <p>To validate the problem, I analyzed 496 user reviews from the Google Play Store and mapped the user experience to identify key friction points</p>
+        </div>
+
+        <div class="stat-pills" id="stat-pills">
+          
+          <div class="stat-pill">
+            <div class="stat-pill-num-wrap">
+              <span class="stat-pill-num" data-count-pct="49">0%</span>
+            </div>
+            <span class="stat-pill-label">Playback &amp;<br>controls issues</span>
+          </div>
+          <div class="stat-pill">
+            <div class="stat-pill-num-wrap">
+              <span class="stat-pill-num" data-count-pct="31">0%</span>
+            </div>
+            <span class="stat-pill-label">Queue &amp;<br>sync issues</span>
+          </div>
+          <div class="stat-pill">
+            <div class="stat-pill-num-wrap">
+              <span class="stat-pill-num" data-count-pct="20">0%</span>
+            </div>
+            <span class="stat-pill-label">UI &amp;<br>navigation issues</span>
+          </div>
+        </div>
+
+        <div class="comic-wrap reveal-up" style="margin-top: 48px;" id="comic-slider-container">
+
+          <div class="comic-container" id="comic-container">
+            <div class="comic-overlay" id="comic-overlay">
+              <div class="overlay-content">
+                <span class="overlay-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                </span>
+                <p>Click to explore the user journey</p>
+              </div>
+            </div>
+
+            <div class="comic-slide active"><img src="Images/Case Study-2.webp"  alt="User Journey – Slide 1"></div>
+            <div class="comic-slide"><img src="Images/Case Study-3.webp"  alt="User Journey – Slide 2"></div>
+            <div class="comic-slide"><img src="Images/Case Study-4.webp"  alt="User Journey – Slide 3"></div>
+            <div class="comic-slide"><img src="Images/Case Study-5.webp"  alt="User Journey – Slide 4"></div>
+            <div class="comic-slide"><img src="Images/Case Study-6.webp"  alt="User Journey – Slide 5"></div>
+            <div class="comic-slide"><img src="Images/Case Study-7.webp"  alt="User Journey – Slide 6"></div>
+            <div class="comic-slide"><img src="Images/Case Study-8.webp"  alt="User Journey – Slide 7"></div>
+            <div class="comic-slide"><img src="Images/Case Study-9.webp"  alt="User Journey – Slide 8"></div>
+            <div class="comic-slide"><img src="Images/Case Study-10.webp" alt="User Journey – Slide 9"></div>
+            <div class="comic-slide"><img src="Images/Case Study-11.webp" alt="User Journey – Slide 10"></div>
+
+            <div class="comic-nav-buttons">
+              <button class="comic-nav-btn prev-btn" disabled aria-label="Previous slide">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+              </button>
+              <button class="comic-nav-btn next-btn" aria-label="Next slide">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="comic-nav-buttons-mobile">
+            <button class="comic-nav-btn prev-btn" disabled aria-label="Previous slide">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+            </button>
+            <button class="comic-nav-btn next-btn" aria-label="Next slide">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
+            </button>
+          </div>
+
+          <div class="comic-dots" id="comic-dots"></div>
+
+        </div>
+
+        <div class="sub-section reveal-up">
+          <h3 class="sub-section-title">Validating with Data</h3>
+          <div class="grid-3-col" style="margin-top: 16px;">
+            <div class="takeaway-card">
+              <div class="takeaway-title" style="color: var(--cr-orange); font-size: 13px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 8px;">49% Playback &amp; Controls</div>
+              <p>Missing speed options and intrusive settings menus that hijacked the viewing context.</p>
+            </div>
+            <div class="takeaway-card">
+              <div class="takeaway-title" style="color: var(--cr-orange); font-size: 13px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 8px;">31% Queue &amp; Syncing</div>
+              <p>Abandoned shows trapped in the watch queue with no intuitive way to manage or clear them.</p>
+            </div>
+            <div class="takeaway-card">
+              <div class="takeaway-title" style="color: var(--cr-orange); font-size: 13px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 8px;">20% UI &amp; Navigation</div>
+              <p>Critical resume features buried under promotional banners, forcing users to hunt before they could watch.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-section reveal-up">
+          <h3 class="sub-section-title">Defining the Core Problem</h3>
+          <div class="section-body">
+            <p>Actions are forced into separate layers, breaking context. The experience lacks clarity, responsiveness, and flow, making viewers work just to watch.</p>
+          </div>
+        </div>
+
+      </section>
+
+      <div class="section-divider"><div class="horizontal-line"></div></div>
+
+      <section class="cs-section" id="section-insights">
+
+        <div class="section-header reveal-up">
+          <span class="sub-heading">02 — Insights</span>
+          <h2 class="section-title">Behind the Reviews</h2>
+        </div>
+
+        <div class="section-body reveal-up">
+          <p>Data showed what was broken. Mapping it to real viewing behavior revealed why, and who was suffering most.</p>
+        </div>
+
+        <div class="grid-2-col">
+          <div class="takeaway-card reveal-up">
+            <div class="graphic-container ratio-4-3" style="margin-bottom: 22px; padding: 0; border: none; background: transparent;">
+              <img src="Images/Persona_male.webp" alt="Efficient Viewer Persona" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
+            </div>
+            <h3 class="takeaway-title" style="font-size: 17px;">The Efficient Viewer</h3>
+            <p>Time-conscious. Demands instant resume access and zero-friction queue management. Every extra tap is a tax on their limited session.</p>
+          </div>
+          <div class="takeaway-card reveal-up" data-delay="0.1">
+            <div class="graphic-container ratio-4-3" style="margin-bottom: 22px; padding: 0; border: none; background: transparent;">
+              <img src="Images/Persona_female.webp" alt="Comfort Viewer Persona" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
+            </div>
+            <h3 class="takeaway-title" style="font-size: 17px;">The Comfort Viewer</h3>
+            <p>Long-session watcher. Expects flexible, in-player pacing controls and uninterrupted adjustments. Immersion is everything.</p>
+          </div>
+        </div>
+
+        <div class="section-header reveal-up" style="margin-top: 56px; margin-bottom: 20px;">
+          <span class="sub-heading">Opportunities</span>
+          <h2 class="section-title">From Problems to Opportunities</h2>
+        </div>
+
+        <div class="grid-2-col">
+          <div class="hmw-card reveal-up">
+            <h3>How might we allow users seamless experience tuning ?</h3>
+            <p>Speed up fillers, slow down complex scenes, adjust quality and avoid interruptions</p>
+          </div>
+          <div class="hmw-card reveal-up" data-delay="0.1">
+            <h3>How might we make Continue Watching reliable and clutter-free ?</h3>
+            <p>Resume instantly, remove unwanted shows, maintain accurate progress</p>
+          </div>
+        </div>
+
+      </section>
+
+      <div class="section-divider"><div class="horizontal-line"></div></div>
+
+      <section class="cs-section" id="section-design">
+
+        <div class="section-header reveal-up">
+          <span class="sub-heading">03 — Design</span>
+          <h2 class="section-title">Turning Insights into Actions</h2>
+        </div>
+
+        <div class="section-body reveal-up">
+          <p>With a clear understanding of the problem, the next step was to explore how these challenges could be solved</p>
+        </div>
+
+        <div class="grid-3-col reveal-up">
+          <div class="principle-card">
+            <h4>Clarity</h4>
+            <p>Deliver the right action at the right moment</p>
+          </div>
+          <div class="principle-card">
+            <h4>Context</h4>
+            <p>Keep users anchored to their content, never pulled away from it.</p>
+          </div>
+          <div class="principle-card">
+            <h4>Control</h4>
+            <p>Hand ownership back to the viewer at every step.</p>
+          </div>
+        </div>
+
+        <div class="graphic-container graphic-padded reveal-scale" style="margin-top: 40px;">
+          <img src="Images/cs-user-flow.webp" alt="User Journey Flowchart">
+        </div>
+
+        <div class="section-header reveal-up" style="margin-top: 56px; margin-bottom: 20px;">
+          <span class="sub-heading">Evolution</span>
+          <h2 class="section-title">From Wireframe to Interface</h2>
+        </div>
+
+        <div class="section-body reveal-up">
+          <p>Each flow was translated into focused UI Improvements wherever needed the most</p>
+        </div>
+
+        <div class="grid-2-col">
+          <div class="reveal-up">
+            <span class="wf-label">Lo-fi — Resume &amp; Queue</span>
+            <div class="graphic-container graphic-padded">
+              <img src="Images/Lofi_1.webp" alt="Lo-fi wireframe: Resume and Queue">
+            </div>
+          </div>
+          <div class="reveal-up" data-delay="0.1">
+            <span class="wf-label">Hi-fi — Resume &amp; Queue</span>
+            <div class="graphic-container graphic-padded">
+              <img src="Images/Hifi_1.webp" alt="Hi-fi wireframe: Resume and Queue">
+            </div>
+          </div>
+          <div class="reveal-up">
+            <span class="wf-label">Lo-fi — Playback Controls</span>
+            <div class="graphic-container graphic-padded">
+              <img src="Images/Lofi_2.webp" alt="Lo-fi wireframe: Playback Controls">
+            </div>
+          </div>
+          <div class="reveal-up" data-delay="0.1">
+            <span class="wf-label">Hi-fi — Playback Controls</span>
+            <div class="graphic-container graphic-padded">
+              <img src="Images/Hifi_2.webp" alt="Hi-fi wireframe: Playback Controls">
+            </div>
+          </div>
+        </div>
+
+        <div class="section-header reveal-up" style="margin-top: 56px; margin-bottom: 20px;">
+          <span class="sub-heading">Interactions</span>
+          <h2 class="section-title">Bringing the Experience to Life</h2>
+        </div>
+
+        <div class="section-body reveal-up">
+          <p>Prototyping key flows to ensure every interaction felt natural, responsive, and earned.</p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 24px; margin-top: 32px;">
+          <div class="video-block reveal-scale">
+            <video autoplay loop muted playsinline>
+              <source src="Images/Cr-1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-block reveal-scale">
+            <video autoplay loop muted playsinline>
+              <source src="Images/Cr-2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+      </section>
+
+      <div class="section-divider"><div class="horizontal-line"></div></div>
+
+      <section class="cs-section" id="section-delivery">
+
+        <div class="section-header reveal-up">
+          <span class="sub-heading">04 — Delivery</span>
+          <h2 class="section-title">The Redesign</h2>
+        </div>
+
+        <div class="features-container">
+
+          <div class="feature-block reveal-up">
+            <div class="feature-block-header">
+              <span class="feature-num">01</span>
+              <h3 class="feature-title">Instant Resumption</h3>
+            </div>
+            <p>Resume content in one tap, directly from the home screen. No more hunting under promotional banners.</p>
+            <div class="decision-block">
+              <span class="decision-label">Design Decision</span>
+              <p>Prioritized immediate access over promotional banners. A strategic trade that serves long-term retention over short-term clicks.</p>
+            </div>
+            <div class="tradeoff-block">
+              <span class="tradeoff-label">UX Trade-off</span>
+              <p>Reduced promo visibility trades short-term click metrics for measurable session-start improvement.</p>
+            </div>
+            
+            <div class="ba-wrapper reveal-scale" style="margin-top: 28px;" data-active="before">
+              <div class="ba-controls">
+                <div class="ba-toggle">
+                  <div class="ba-slider"></div>
+                  <button class="ba-btn active" data-state="before">Before</button>
+                  <button class="ba-btn" data-state="after">After</button>
+                </div>
+              </div>
+              <div class="graphic-container ba-graphic">
+                <img src="Images/Before_1.webp" alt="Before Design: Discovery and Entry" class="ba-image">
+                <img src="Images/After_1.webp" alt="After Design: Discovery and Entry" class="ba-image">
+              </div>
+            </div>
+
+          </div>
+
+          <div class="feature-block reveal-up">
+            <div class="feature-block-header">
+              <span class="feature-num">02</span>
+              <h3 class="feature-title">One-Tap Queue Management</h3>
+            </div>
+            <p>Direct contextual menus for instant show removal. Optimistic UI keeps it snappy — actions feel confirmed before the server responds.</p>
+            <div class="decision-block">
+              <span class="decision-label">Design Decision</span>
+              <p>Collapsed a multi-step frustration into a single contextual action. Undo support prevents accidental loss without slowing the flow.</p>
+            </div>
+            <div class="tradeoff-block">
+              <span class="tradeoff-label">UX Trade-off</span>
+              <p>Optimistic UI introduces a brief window where an error could silently fail. Mitigated by a visible undo snackbar.</p>
+            </div>
+            
+            <div class="ba-wrapper reveal-scale" style="margin-top: 28px;" data-active="before">
+              <div class="ba-controls">
+                <div class="ba-toggle">
+                  <div class="ba-slider"></div>
+                  <button class="ba-btn active" data-state="before">Before</button>
+                  <button class="ba-btn" data-state="after">After</button>
+                </div>
+              </div>
+              <div class="graphic-container ba-graphic">
+                <img src="Images/Before_2.webp" alt="Before Design: Queue Management" class="ba-image">
+                <img src="Images/After_2.webp" alt="After Design: Queue Management" class="ba-image">
+              </div>
+            </div>
+
+          </div>
+
+          <div class="feature-block reveal-up">
+            <div class="feature-block-header">
+              <span class="feature-num">03</span>
+              <h3 class="feature-title">Accessible Playback Speeds</h3>
+            </div>
+            <p>Speed options up to 2x integrated directly into the primary player. Surfaced without needing to pause or dig through settings.</p>
+            <div class="decision-block">
+              <span class="decision-label">Design Decision</span>
+              <p>Answered a major user demand for instant pacing adjustments. Dual-location placement (player HUD + settings) serves both viewer types.</p>
+            </div>
+
+            <div class="ba-wrapper reveal-scale" style="margin-top: 28px;" data-active="before">
+              <div class="ba-controls">
+                <div class="ba-toggle">
+                  <div class="ba-slider"></div>
+                  <button class="ba-btn active" data-state="before">Before</button>
+                  <button class="ba-btn" data-state="after">After</button>
+                </div>
+              </div>
+              <div class="graphic-container ba-graphic">
+                <img src="Images/Before_3.webp" alt="Before Design: Playback Controls" class="ba-image">
+                <img src="Images/After_3.webp" alt="After Design: Playback Controls" class="ba-image">
+              </div>
+            </div>
+
+          </div>
+
+          <div class="feature-block reveal-up">
+            <div class="feature-block-header">
+              <span class="feature-num">04</span>
+              <h3 class="feature-title">Unobtrusive Settings</h3>
+            </div>
+            <p>A compact side panel replaces the full-screen settings takeover. Visual context preserved while the most-used preferences stay close.</p>
+            <div class="decision-block">
+              <span class="decision-label">Design Decision</span>
+              <p>Preserves visual context while surfacing frequently used preferences. The panel anchors to the edge, never a full interruption.</p>
+            </div>
+            
+            <div class="ba-wrapper reveal-scale" style="margin-top: 28px;" data-active="before">
+              <div class="ba-controls">
+                <div class="ba-toggle">
+                  <div class="ba-slider"></div>
+                  <button class="ba-btn active" data-state="before">Before</button>
+                  <button class="ba-btn" data-state="after">After</button>
+                </div>
+              </div>
+              <div class="graphic-container ba-graphic">
+                <img src="Images/Before_4.webp" alt="Before Design: Playback Settings" class="ba-image">
+                <img src="Images/After_4.webp" alt="After Design: Playback Settings" class="ba-image">
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <div class="section-divider"><div class="horizontal-line"></div></div>
+
+      <section class="cs-section" id="section-results">
+
+        <div class="section-header reveal-up">
+          <span class="sub-heading">05 — Results</span>
+          <h2 class="section-title">Project Impact</h2>
+        </div>
+
+        <div class="grid-3-col">
+          <div class="results-stat-card reveal-up">
+            <span class="stat-value" data-count-from="1" data-count-to="3" data-suffix="x Faster">3x Faster</span>
+            <p>Resumption time. Reduced the time it takes to resume a show from ~9 seconds down to ~3 seconds.</p>
+          </div>
+          <div class="results-stat-card reveal-up" data-delay="0.1">
+            <span class="stat-value">100%</span>
+            <p>Task success rate. 5/5 users cleared their queue on the first try — up from 0/5 in baseline testing.</p>
+          </div>
+          <div class="results-stat-card reveal-up" data-delay="0.2">
+            <span class="stat-value" data-count-from="0" data-count-to="50" data-suffix="% Fewer">50% Fewer</span>
+            <p>Taps required. Playback speed adjustment went from a 4-tap hidden process to a 2-tap seamless interaction.</p>
+          </div>
+        </div>
+
+        <div class="section-header reveal-up" style="margin-top: 56px; margin-bottom: 20px;">
+          <span class="sub-heading">Reflection</span>
+          <h2 class="section-title">Key Takeaways</h2>
+        </div>
+
+        <div class="grid-3-col">
+          <div class="takeaway-card reveal-up">
+            <div class="takeaway-title">Design Needs a Business Argument</div>
+            <p>Visual cleanup isn't enough. Elevating "Continue Watching" was a deliberate strategic bet on long-term engagement over short-term promo clicks.</p>
+          </div>
+          <div class="takeaway-card reveal-up" data-delay="0.1">
+            <div class="takeaway-title">Systems Over Screens</div>
+            <p>The biggest impact came from small structural fixes — not an overhaul. Knowing where to look matters more than redesigning everything.</p>
+          </div>
+          <div class="takeaway-card reveal-up" data-delay="0.2">
+            <div class="takeaway-title">The Story Behind the Data</div>
+            <p>Mapping raw review patterns to real human habits — efficiency vs. comfort — is what turned numbers into a design strategy with empathy.</p>
+          </div>
+        </div>
+
+        <div class="graphic-container reveal-scale" style="margin-top: 20px; margin-bottom: -30px; padding: 0; border: none; background: transparent;">
+          <img src="Images/Case Study-30.webp" alt="Thank You" style="width:100%;height:auto;border-radius:16px;display:block;">
+        </div>
+
+        <div class="more-projects-section">
+          <h2 class="section-title">More Projects</h2>
+
+          <div class="case-studies-grid grid-view">
+           <div class="case-card" id="card-epic-gains"
+     data-href="epic-gains.html"
+     onmouseenter="this.classList.add('is-active')"
+     onmouseleave="this.classList.remove('is-active')"
+     style="cursor:pointer;">
+  <div class="case-card-bg grid-only"></div>
+  <div class="case-card-bg-hover grid-only"></div>
+
+  <div class="case-content">
+    <div class="case-text">
+      <h3 class="case-title">
+        <span class="line-wrapper grid-only"><span class="line-inner">Epic Gains | Protothon 2026</span></span>
+      </h3>
+      <p class="case-subtitle">
+        <span class="line-wrapper grid-only"><span class="line-inner">Gamifying fitness to beat beginner gym anxiety</span></span>
+      </p>
+    </div>
+    <div class="case-arrow grid-only">
+      <span class="line-wrapper">
+        <span class="line-inner">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </span>
+      </span>
+    </div>
+  </div>
+
+  <div class="case-mockup grid-only">
+    <img src="Images/Epic_Gains_Thumbnail_Mockup.webp" alt="Epic Gains App Interface">
+  </div>
+</div>
+
+      </section>
+
+    </main>
+
+    
+    <footer class="footer" id="contact">
+      <div class="section-divider">
+        <div class="horizontal-line"></div>
+      </div>
+  
+      <div class="footer-content">
+        <div class="footer-left">
+          <h2 class="footer-heading">Have a Cool Idea?<br />Let's Collaborate</h2>
+        </div>
+  
+        <div class="footer-right">
+          <div class="contact-col">
+            <p class="label">Location</p>
+            <p class="value">Punjab, India</p>
+            <p class="label" style="margin-top: 24px">Contact</p>
+            
+            <p class="value">
+              <span class="copy-click" data-copy="+91 836-027-4066" data-tooltip="Click to copy">+91 836-027-4066</span>
+            </p>
+            <p class="value">
+              <span class="copy-click" data-copy="harmanjeet.singh.ux@proton.me" data-tooltip="Click to copy">harmanjeet.singh.ux@proton.me</span>
+            </p>
+            
+          </div>
+  
+       <div class="social-col">
+            <p class="label">Socials</p>
+            <div class="links-grid">
+              <a href="https://www.behance.net/harmanjeetsingh25" target="_blank" rel="noopener noreferrer" class="social-btn">
+                <img src="Images/behance-icon.svg" class="social-logo" alt="Behance" /> Behance
+              </a>
+              <a href="https://www.linkedin.com/in/harmanjeet-singh-52892824a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="social-btn">
+                <img src="Images/linkedin-icon.svg" class="social-logo" alt="LinkedIn" /> LinkedIn
+              </a>
+              <a href="https://medium.com/@theharmonicone" target="_blank" rel="noopener noreferrer" class="social-btn">
+                <img src="Images/medium-icon.svg" class="social-logo" alt="Medium" /> Medium
+              </a>
+              <a href="https://www.instagram.com/theharmonicone/" target="_blank" rel="noopener noreferrer" class="social-btn">
+                <img src="Images/insta-icon.svg" class="social-logo" alt="Instagram" /> Instagram
+              </a>
+            </div>
+          </div>
+  
+          <div class="links-col">
+            <p class="label">Links</p>
+            <a href="#work" class="link">Work</a>
+            <a href="#info" class="link">Info</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="section-divider">
+        <div class="horizontal-line"></div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p class="footer-credit">Designed By</p>
+          <div class="footer-brand">
+            <img src="Images/emoji.webp" alt="Emoji" class="footer-icon" />
+            <img
+              src="Images/Initials.svg"
+              alt="Initials"
+              class="footer-initials-img"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    
+    <script src="transitions.js"></script>
+    <script src="script.js"></script>
+    <script src="casestudy.js"></script>
+
+  </body>
+</html>

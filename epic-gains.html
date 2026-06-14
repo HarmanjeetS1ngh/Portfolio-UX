@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Epic Gains — Harmanjeet Singh</title>
+    <script>if(sessionStorage.getItem('pt-nav')){document.documentElement.style.setProperty('--pt-init','0');}</script>
+    <style>body{opacity:var(--pt-init,1);transition:none!important;}</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="casestudy.css" />
+    <link rel="stylesheet" href="epic-gains.css" />
+    <link rel="stylesheet" href="transitions.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script>
+  </head>
+
+  <body data-page="case-study" data-case="epic-gains">
+    <div id="cs-progress"></div>
+
+  <nav id="cs-toc" aria-label="Chapter index">
+  <span class="toc-header">Contents</span>
+  <a class="toc-item" href="#section-problem" data-section="section-problem">
+    <span class="toc-label">01 — Problem</span>
+  </a>
+  <a class="toc-item" href="#section-concept" data-section="section-concept">
+    <span class="toc-label">02 — Concept</span>
+  </a>
+  <a class="toc-item" href="#section-design" data-section="section-design">
+    <span class="toc-label">03 — Design</span>
+  </a>
+  <a class="toc-item" href="#section-delivery" data-section="section-delivery">
+    <span class="toc-label">04 — Delivery</span>
+  </a>
+  <a class="toc-item" href="#section-reflection" data-section="section-reflection">
+    <span class="toc-label">05 — Reflection</span>
+  </a>
+</nav>
+
+    <div class="nav-grid-header-shell" id="navbarShell">
+      <nav class="navbar" id="navbar">
+        <a href="index.html" class="cs-back-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Back
+        </a>
+        <div class="desktop-menu-wrapper">
+          <span class="cs-nav-title">Epic Gains</span>
+        </div>
+        <div style="width: 82px; pointer-events: none"></div>
+      </nav>
+    </div>
+
+    <div class="grid-lines-wrapper">
+      <div class="grid-line left-line"></div>
+      <div class="grid-line right-line"></div>
+    </div>
+
+    <main>
+
+      <div class="cs-banner-wrap">
+        <div class="cs-banner-inner reveal-scale">
+          <img src="Images/Banner_Epic_gains.webp" alt="Epic Gains App Screens Presentation Banner" style="width: 100%; height: auto; display: block; border-radius: 16px; border: 1px solid rgba(63, 86, 238, 0.15);" />
+        </div>
+      </div>
+
+      <div class="cs-meta-outer">
+        <div class="cs-meta-grid eg-meta-grid">
+          <div>
+            <div class="cs-meta-label">Overview</div>
+            <div class="cs-meta-value">A gamified fitness app where your Pokémon grows only when you do, and feels it when you don't.</div>
+          </div>
+          <div>
+            <div class="cs-meta-label">Role</div>
+            <div class="cs-meta-value">Lead UX Designer</div>
+          </div>
+          <div>
+            <div class="cs-meta-label">Duration</div>
+            <div class="cs-meta-value">28 Hours</div>
+          </div>
+          <div>
+            <div class="cs-meta-label">Result</div>
+            <div class="cs-meta-value" style="color: var(--eg-gold)">
+              🥈 2nd Place<br /><span style="color: rgba(255, 255, 255, 0.932); font-size: clamp(15px, 1.6vw, 16px)">Protothon 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider"><div class="horizontal-line"></div></div>
+
+      <section class="cs-section pw-section" id="section-problem">
+        <div class="section-header reveal-up">
+          <span class="pw-section-tag">01 — Problem</span>
+          <h2 class="pw-section-title">People don't quit the gym because they are lazy.</h2>
+          <span class="pw-section-hook">They quit because they feel lost, overwhelmed, and alone. We solved all three problems with one simple idea.</span>
+        </div>
+
+        <div class="comic-wrap reveal-up" style="margin-top: 40px" id="comic-slider-container">
+          <div class="comic-container" id="comic-container">
+            <div class="comic-overlay" id="comic-overlay">
+              <div class="overlay-content">
+                <span class="overlay-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                </span>
+                <p>Click to explore Arjun's journey</p>
+              </div>
+            </div>
+            <div class="comic-slide active"><img src="Images/Slide_2.webp" alt="User Narrative Scene 1" /></div>
+            <div class="comic-slide"><img src="Images/Slide_3.webp" alt="User Narrative Scene 2" /></div>
+            <div class="comic-slide"><img src="Images/Slide_4.webp" alt="User Narrative Scene 3" /></div>
+            <div class="comic-slide"><img src="Images/Slide_5.webp" alt="User Narrative Conclusion" /></div>
+            <div class="comic-nav-buttons">
+              <button class="comic-nav-btn prev-btn" disabled aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg></button>
+              <button class="comic-nav-btn next-btn" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg></button>
+            </div>
+          </div>
+          <div class="comic-nav-buttons-mobile">
+            <button class="comic-nav-btn prev-btn" disabled aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg></button>
+            <button class="comic-nav-btn next-btn" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg></button>
+          </div>
+          <div class="comic-dots" id="comic-dots"></div>
+        </div>
+
+        <div class="sub-section reveal-up" style="margin-top: 48px;">
+          <p class="pw-sub-heading">The numbers prove it</p>
+
+          <div class="eg-impact-grid reveal-up" style="margin-top: 20px;">
+            <div class="eg-impact-card">
+              <span class="eg-impact-from">BarBend, 2024</span>
+              <span class="eg-impact-arrow" style="font-size:clamp(28px,4vw,38px); font-weight:800; color:var(--eg-blue-text); letter-spacing:-0.04em; line-height:1; margin: 6px 0;">63%</span>
+              <span class="eg-impact-to">quit within 6 months</span>
+              <p>Only 18% attend consistently.</p>
+            </div>
+            <div class="eg-impact-card">
+              <span class="eg-impact-from">HFA, 2025</span>
+              <span class="eg-impact-arrow" style="font-size:clamp(28px,4vw,38px); font-weight:800; color:var(--eg-blue-text); letter-spacing:-0.04em; line-height:1; margin: 6px 0;">1 in 3</span>
+              <span class="eg-impact-to">leave every year</span>
+              <p>Annual retention: 66.4%.</p>
+            </div>
+            <div class="eg-impact-card">
+              <span class="eg-impact-from">Fitness communities</span>
+              <span class="eg-impact-arrow" style="font-size:clamp(28px,4vw,38px); font-weight:800; color:var(--eg-blue-text); letter-spacing:-0.04em; line-height:1; margin: 6px 0;">#1</span>
+              <span class="eg-impact-to">reason: no idea what to do</span>
+              <p>The #1 reason people quit: They simply don't know what to do.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"><div class="horizontal-line"></div></div>
+      <div class="eg-quote-break reveal-up">
+        <p class="eg-quote-text"><span class="dim">What if going to the gym</span><br />felt like a game?</p>
+        <p style="font-size: 13px; color: rgba(247,247,247,0.28); margin-top: 16px; letter-spacing: 0.04em; text-transform: uppercase; font-weight: 700;">Prompt: Design a gym app with a pet companion for beginners</p>
+      </div>
+      <div class="section-divider"><div class="horizontal-line"></div></div>
+
+      <section class="cs-section pw-section" id="section-concept">
+        <div class="section-header reveal-up">
+          <span class="pw-section-tag">02 — Concept</span>
+          <h2 class="pw-section-title">Why a virtual pet?</h2>
+          <span class="pw-section-hook">Points only reward the past. A virtual pet that reacts to your daily actions builds a habit you don't want to break.</span>
+        </div>
+
+        <div class="pw-body reveal-up">
+          <p>Virtual pets make us care. Most fitness apps just show numbers. But in Epic Gains, if Arjun skips his workout, his pet gets sad. If he works out, his pet levels up and evolves. The goal isn't just to get fit—it's to make sure you don't let your buddy down.</p>
+        </div>
+
+        <div class="graphic-container mockup-box landscape reveal-scale" style="margin-top: 32px;">
+          <img src="Images/EG_Mechanic_Diagram.webp" alt="Skip vs Consistent mechanic" />
+        </div>
+
+        <div class="sub-section reveal-up" style="margin-top: 40px;">
+          <p class="pw-sub-heading">Visual identity</p>
+
+          <div class="graphic-container mockup-box landscape reveal-scale" style="margin-top: 20px;">
+            <img src="Images/EG_Design_System.webp" alt="Epic Gains design system — wireframes, color palette, typography" onerror="this.parentNode.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;min-height:280px;flex-direction:column;gap:16px;\'><img src=\'../uploads/1780728578008_image.png\' style=\'max-width:100%;border-radius:12px;\' alt=\'Design system\' onerror=\'this.style.display=&quot;none&quot;\' /><span class=\'eg-screen-label\' style=\'color:rgba(247,247,247,0.4);font-size:13px;\'>Design System: Wireframes · Color Palette · Typography</span></div>'" />
+          </div>
+
+        </div>
+
+        <div class="sub-section reveal-up" style="margin-top: 40px;">
+          <div class="pw-principle-list">
+            <div class="pw-principle-item reveal-up">
+              <span class="pw-principle-num">01</span>
+              <div class="pw-principle-content">
+                <h4>Guided</h4>
+                <p>Tells you exactly what to do. No guessing.</p>
+              </div>
+            </div>
+            <div class="pw-principle-item reveal-up" data-delay="0.08">
+              <span class="pw-principle-num">02</span>
+              <div class="pw-principle-content">
+                <h4>Emotional</h4>
+                <p>Gives you a fun reason to come back every day, even when you feel lazy.</p>
+              </div>
+            </div>
+            <div class="pw-principle-item reveal-up" data-delay="0.16">
+              <span class="pw-principle-num">03</span>
+              <div class="pw-principle-content">
+                <h4>Playful</h4>
+                <p>Working out should feel like playing a game, not doing a chore.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"><div class="horizontal-line"></div></div>
+
+      <section class="cs-section pw-section" id="section-design">
+        <div class="section-header reveal-up">
+          <span class="pw-section-tag">03 — Design</span>
+          <h2 class="pw-section-title">Bringing the Idea to Life.</h2>
+          <span class="pw-section-hook">We focused on the user's story first.</span>
+        </div>
+
+       
+
+        <div class="features-container" style="margin-top: 40px;">
+
+          <div class="pw-feature-block reveal-up">
+            <div class="pw-feature-header">
+              <span class="pw-feature-num">01</span>
+              <h3 class="pw-feature-title">Make starting easy</h3>
+            </div>
+            <div class="pw-feature-body">
+              <p>A quick 5-step quiz creates a custom workout plan instantly. You pick your pet at the very end of the quiz. This makes you feel invested before the real work begins.</p>
+            </div>
+            <div class="pw-discovery">
+              <span class="pw-discovery-label">Design Decision</span>
+              <p>Companion selection is step 5, not step 1 — the quiz builds investment before the hook is introduced.</p>
+            </div>
+            <div class="grid-2-col reveal-scale" style="margin-top: 24px; gap: 16px;">
+              <div class="graphic-container mockup-box mobile">
+                <img src="Images/EG_Onboard_1.webp" alt="Onboarding — fitness level">
+              </div>
+              <div class="graphic-container mockup-box mobile">
+                <img src="Images/EG_Onboard_2.webp" alt="Onboarding — choose companion">
+              </div>
+            </div>
+          </div>
+
+          <div class="pw-feature-block reveal-up">
+            <div class="pw-feature-header">
+              <span class="pw-feature-num">02</span>
+              <h3 class="pw-feature-title">Show growth, not just stats</h3>
+            </div>
+            <div class="pw-feature-body">
+              <p>Your daily plan, progress, and pet's mood are the first things you see. Earning points to level up your pet changes your goal from "getting fit" to "not skipping tomorrow."</p>
+            </div>
+            <div class="pw-discovery">
+              <span class="pw-discovery-label">Design Decision</span>
+              <p>Companion XP and today's workout share equal visual weight — progress and plan feel like one thing.</p>
+            </div>
+            <div class="graphic-container mockup-box mobile reveal-scale" style="margin-top: 24px;">
+              <img src="Images/EG_Dashboard.webp" alt="Dashboard — Squirtle Lv.12" />
+            </div>
+          </div>
+
+          <div class="pw-feature-block reveal-up">
+            <div class="pw-feature-header">
+              <span class="pw-feature-num">03</span>
+              <h3 class="pw-feature-title">Keep workouts simple</h3>
+            </div>
+            <div class="pw-feature-body">
+              <p>You see one exercise at a time. Built-in videos show you how to do it. The app tracks your sets automatically so you don't have to stop. You earn points during your workout, keeping you motivated in the moment.</p>
+            </div>
+            <div class="pw-discovery">
+              <span class="pw-discovery-label">Design Decision</span>
+              <p>Auto-logging removes mid-workout friction. Default flow assumes completion; undo handles edge cases.</p>
+            </div>
+            <div class="pw-tradeoff">
+              <span class="pw-tradeoff-label">UX Trade-off</span>
+              <p>Auto-log can't distinguish a completed set from a mid-set rest. Haptic confirmation is earmarked for v2.</p>
+            </div>
+            <div class="grid-2-col reveal-scale" style="margin-top: 24px; gap: 16px;">
+              <div class="graphic-container mockup-box mobile">
+                <img src="Images/EG_Workout_List.webp" alt="Exercise list with XP" />
+              </div>
+              <div class="graphic-container mockup-box mobile">
+                <img src="Images/EG_Workout_Session.webp" alt="Live workout set tracker" />
+              </div>
+            </div>
+          </div>
+
+          <div class="pw-feature-block reveal-up">
+            <div class="pw-feature-header">
+              <span class="pw-feature-num">04</span>
+              <h3 class="pw-feature-title">Celebrate every win</h3>
+            </div>
+            <div class="pw-feature-body">
+              <p>When you finish a workout, your pet celebrates with you. Seeing your pet happy is the best reward.</p>
+            </div>
+            <div class="pw-discovery">
+              <span class="pw-discovery-label">Design Decision</span>
+              <p>Pokémon celebration precedes the summary. Emotional payoff first, data second.</p>
+            </div>
+            <div class="graphic-container mockup-box mobile reveal-scale" style="margin-top: 24px;">
+              <img src="Images/EG_Achievement.webp" alt="Workout complete — Squirtle +15XP" />
+            </div>
+          </div>
+
+          <div class="pw-feature-block reveal-up">
+            <div class="pw-feature-header">
+              <span class="pw-feature-num">05</span>
+              <h3 class="pw-feature-title">Friendly reminders, no guilt</h3>
+            </div>
+            <div class="pw-feature-body">
+              <p>If you miss a day, the app doesn't make you feel bad. Instead, it sends a friendly message like:</p>
+            </div>
+            <div class="pw-notif-callout">"Hey… are we still training today? Your pet is waiting for you! 💪"</div>
+            <div class="pw-discovery" style="margin-top: 16px;">
+              <span class="pw-discovery-label">Design Decision</span>
+              <p>Re-engagement uses the companion's voice, not the app's. Emotional nudges, not pressure.</p>
+            </div>
+            <div class="graphic-container mockup-box mobile reveal-scale" style="margin-top: 24px;">
+              <img src="Images/EG_Notification.webp" alt="Lock-screen nudge from Squirtle" />
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <div class="section-divider" style="margin-top: 0;"><div class="horizontal-line"></div></div>
+
+      <section class="cs-section pw-section" id="section-delivery">
+        <div class="section-header reveal-up">
+          <span class="pw-section-tag">04 — Delivery</span>
+          <h2 class="pw-section-title">One Simple Solution.</h2>
+          <span class="pw-section-hook">We didn't build three different features. We used one main idea—the virtual pet—to solve fear, confusion, and quitting.</span>
+        </div>
+
+        <div class="eg-impact-grid reveal-up" style="margin-top: 32px;">
+          <div class="eg-impact-card">
+            <span class="eg-impact-from">Fear</span>
+            <span class="eg-impact-arrow">↓</span>
+            <span class="eg-impact-to">Guidance</span>
+            <p>A quick quiz gives you a clear plan.</p>
+          </div>
+          <div class="eg-impact-card">
+            <span class="eg-impact-from">Confusion</span>
+            <span class="eg-impact-arrow">↓</span>
+            <span class="eg-impact-to">Simplicity</span>
+            <p>One exercise at a time, with built-in video guides.</p>
+          </div>
+          <div class="eg-impact-card">
+            <span class="eg-impact-from">Quitting</span>
+            <span class="eg-impact-arrow">↓</span>
+            <span class="eg-impact-to">Accountability</span>
+            <p>A pet that needs you keeps you coming back.</p>
+          </div>
+        </div>
+
+        <div class="graphic-container mockup-box landscape reveal-scale" style="margin-top: 16px;">
+          <img src="Images/EG_Impact.webp" alt="Arjun is now a pro — Blastoise evolved" />
+        </div>
+
+     <div class="eg-arc-block reveal-up" style="margin-bottom: 8px;">
+  <div class="eg-arc-side">
+    <span class="eg-arc-label">Day 1</span>
+    <img src="Images/Arjun_Beginner.webp" class="arjun-img" alt="Arjun Day 1" />
+    <div class="eg-arc-name">Arjun, 22</div>
+    <p>Just joined. Wants to get fit but doesn't know where to start.</p>
+  </div>
+
+  <div class="eg-arc-divider">
+    <div class="eg-arc-arrow-badge">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14"></path>
+        <path d="m12 5 7 7-7 7"></path>
+      </svg>
+    </div>
+  </div>
+
+  <div class="eg-arc-side right">
+    <span class="eg-arc-label">Weeks later</span>
+    <img src="Images/Arjun_Intermediate.webp" class="arjun-img" alt="Arjun Pro" />
+    <div class="eg-arc-name">Arjun, Pro</div>
+    <p>Doing harder workouts. His pet has fully evolved.</p>
+  </div>
+</div>
+      </section>
+
+      <div class="section-divider"><div class="horizontal-line"></div></div>
+
+      <section class="cs-section pw-section" id="section-reflection">
+        <div class="section-header reveal-up">
+          <span class="pw-section-tag">05 — Reflection</span>
+          <h2 class="pw-section-title">What I Learned in 28 Hours.</h2>
+          <span class="pw-section-hook">This fast project taught me a lot about making quick design choices and planning for the future.</span>
+        </div>
+
+  <div class="pw-principle-list reveal-up" style="margin-top: 40px;">
+  <div class="pw-principle-item reveal-up">
+    <span class="pw-principle-num">01</span>
+    <div class="pw-principle-content">
+      <h4>Less time meant better focus</h4>
+      <p>Having only 28 hours forced me to focus on the main idea first. When the core idea is strong, designing the screens is easy.</p>
+    </div>
+  </div>
+  
+  <div class="pw-principle-item reveal-up" data-delay="0.08">
+    <span class="pw-principle-num">02</span>
+    <div class="pw-principle-content">
+      <h4>Emotions drive actions</h4>
+      <p>The virtual pet solved a real user problem that simple numbers could not.</p>
+    </div>
+  </div>
+  
+  <div class="pw-principle-item reveal-up" data-delay="0.16">
+    <span class="pw-principle-num">03</span>
+    <div class="pw-principle-content">
+      <h4>User stories save time</h4>
+      <p>Always keeping our user, Arjun, in mind helped us make quick design choices without arguing.</p>
+    </div>
+  </div>
+</div>
+
+        <div class="sub-section reveal-up" style="margin-top: 40px;">
+          <p class="pw-sub-heading">Where Version 2 could go</p>
+
+          <div class="pw-constraint-list reveal-up" style="margin-top: 20px;">
+            <div class="pw-constraint-item">
+              <div class="pw-constraint-icon">🏆</div>
+              <div>
+                <p><strong style="color:rgba(247,247,247,0.85); font-weight:600; display:block; margin-bottom:3px;">Weekly Challenges</strong>Challenge friends or other users. Win and your pet earns rare items.</p>
+              </div>
+            </div>
+            <div class="pw-constraint-item">
+              <div class="pw-constraint-icon">🥗</div>
+              <div>
+                <p><strong style="color:rgba(247,247,247,0.85); font-weight:600; display:block; margin-bottom:3px;">Food and Rest Tracking</strong>Let your pet react to how well you eat and sleep, not just your workouts.</p>
+              </div>
+            </div>
+            <div class="pw-constraint-item">
+              <div class="pw-constraint-icon">👥</div>
+              <div>
+                <p><strong style="color:rgba(247,247,247,0.85); font-weight:600; display:block; margin-bottom:3px;">Supportive Community</strong>A feed built around milestones and evolutions — not a leaderboard that makes you feel bad.</p>
+              </div>
+            </div>
+            <div class="pw-constraint-item">
+              <div class="pw-constraint-icon">⚡</div>
+              <div>
+                <p><strong style="color:rgba(247,247,247,0.85); font-weight:600; display:block; margin-bottom:3px;">Quick Tap Tracking</strong>A quick tap to confirm a set without breaking your flow.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-section reveal-up" style="margin-top: 40px;">
+          <p class="pw-sub-heading">Recognition & files</p>
+
+          <div class="graphic-container mockup-box landscape reveal-scale" style="margin-top: 20px; position: relative; overflow: visible;">
+            <img src="Images/EG_Certificate.webp" alt="Protothon 2026 — 2nd Place Certificate" style="width:100%; height:auto; display:block; border-radius:14px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+            <div style="display:none; min-height:200px; align-items:center; justify-content:center; border-radius:14px; background:#131826; border:1px solid rgba(63,86,238,0.18); flex-direction:column; gap:12px;">
+              <span style="font-size:36px;">🥈</span>
+              <span style="font-size:14px; color:rgba(247,247,247,0.4); letter-spacing:0.02em;">Add EG_Certificate.webp to Images/</span>
+            </div>
+          </div>
+          <div style="margin-top: 20px;">
+            <a href="https://www.figma.com/design/JHvjX1yXg95TqqE4fWNaUW/Epic-Gains?node-id=0-1&t=ujW8QSMhTGcLLZqV-1" target="_blank" rel="noopener" class="eg-figma-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;flex-shrink:0;"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              View Figma File
+            </a>
+          </div>
+        </div>
+
+        <div class="closing-statement reveal-up">
+          <h3>Fitness apps have a retention problem. Epic Gains bets that <span style="color: var(--text-primary); font-weight: 600;">a companion who needs you</span> is more powerful than a goal you set for yourself.</h3>
+        </div>
+      </section>
+
+      <div class="section-divider"><div class="horizontal-line"></div></div>
+
+      <div class="more-projects-section">
+        <h2 class="section-title">More Projects</h2>
+        <div class="case-studies-grid grid-view">
+          <div class="case-card" id="card-crunchyroll" data-href="crunchyroll.html" onmouseenter="this.classList.add('is-active')" onmouseleave="this.classList.remove('is-active')" style="cursor: pointer;">
+            <div class="case-card-bg grid-only"></div>
+            <div class="case-card-bg-hover grid-only"></div>
+            <div class="case-content">
+              <div class="case-text">
+                <h3 class="case-title"><span class="line-wrapper grid-only"><span class="line-inner">Redesigning Crunchyroll</span></span></h3>
+                <p class="case-subtitle"><span class="line-wrapper grid-only"><span class="line-inner">A UX case study restoring user control</span></span></p>
+              </div>
+              <div class="case-arrow grid-only">
+                <span class="line-wrapper"><span class="line-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></span>
+              </div>
+            </div>
+            <div class="case-mockup grid-only">
+              <img src="Images/Crunchyroll_Thumbnail_Mockup.webp" alt="Crunchyroll App Redesign Interface">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="footer" id="contact">
+      <div class="section-divider"><div class="horizontal-line"></div></div>
+      <div class="footer-content">
+        <div class="footer-left">
+          <h2 class="footer-heading">Have a Cool Idea?<br />Let's Collaborate</h2>
+        </div>
+        <div class="footer-right">
+          <div class="contact-col">
+            <p class="label">Location</p>
+            <p class="value">Punjab, India</p>
+            <p class="label" style="margin-top: 24px">Contact</p>
+            <p class="value"><span class="copy-click" data-copy="+91 836-027-4066" data-tooltip="Click to copy">+91 836-027-4066</span></p>
+            <p class="value"><span class="copy-click" data-copy="harmanjeet.singh.ux@proton.me" data-tooltip="Click to copy">harmanjeet.singh.ux@proton.me</span></p>
+          </div>
+          <div class="social-col">
+            <p class="label">Socials</p>
+            <div class="links-grid">
+              <a href="https://www.behance.net/harmanjeetsingh25" target="_blank" rel="noopener noreferrer" class="social-btn">
+                <img src="Images/behance-icon.svg" class="social-logo" alt="Behance" /> Behance
+              </a>
+              <a href="https://www.linkedin.com/in/harmanjeet-singh-52892824a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="social-btn">
+                <img src="Images/linkedin-icon.svg" class="social-logo" alt="LinkedIn" /> LinkedIn
+              </a>
+              <a href="https://medium.com/@theharmonicone" target="_blank" rel="noopener noreferrer" class="social-btn">
+                <img src="Images/medium-icon.svg" class="social-logo" alt="Medium" /> Medium
+              </a>
+              <a href="https://www.instagram.com/theharmonicone/" target="_blank" rel="noopener noreferrer" class="social-btn">
+                <img src="Images/insta-icon.svg" class="social-logo" alt="Instagram" /> Instagram
+              </a>
+            </div>
+          </div>
+          <div class="links-col">
+            <p class="label">Links</p>
+            <a href="#work" class="link">Work</a>
+            <a href="#info" class="link">Info</a>
+          </div>
+        </div>
+      </div>
+      <div class="section-divider"><div class="horizontal-line"></div></div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p class="footer-credit">Designed By</p>
+          <div class="footer-brand">
+            <img src="Images/emoji.webp" alt="Emoji" class="footer-icon" />
+            <img src="Images/Initials.svg" alt="Initials" class="footer-initials-img" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="epic-gains.js"></script>
+    
+    <script src="transitions.js"></script>
+   <script src="script.js"></script>
+  </body>
+</html>

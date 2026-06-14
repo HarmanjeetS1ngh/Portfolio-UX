@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harmanjeet Singh - UX Designer</title>
+    <script>
+      if (sessionStorage.getItem("pt-nav")) {
+        document.documentElement.style.setProperty("--pt-init", "0");
+      }
+    </script>
+    <style>
+      body {
+        opacity: var(--pt-init, 1);
+        transition: none !important;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="transitions.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      if (sessionStorage.getItem("pt-nav")) {
+        document.documentElement.style.setProperty("--pt-init", "0");
+        // Lock home nav elements at 0 opacity ONLY if we are coming back from a case study
+        if (sessionStorage.getItem("pt-type") === "drill-up") {
+          document.documentElement.style.setProperty("--pt-nav-init", "0");
+        }
+      }
+    </script>
+    <style>
+      /* Hide content EXCEPT navbar on initial load */
+    body > *:not(#navbarShell):not(#resumeModal):not(#uiViewerModal) {
+    opacity: var(--pt-init, 1);
+    transition: none !important;
+}
+      /* Hide home nav elements during drill-up to prevent the 1-frame flash */
+      .nav-profile,
+      .nav-toggle-container,
+      .resume-btn,
+      .hamburger {
+        opacity: var(--pt-nav-init, 1);
+        transition: none !important;
+      }
+    </style>
+    
+    <link
+      rel="preload"
+      as="image"
+      href="Images/non-active-card-1.webp"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="Images/non-active-card-2.webp"
+      fetchpriority="high"
+    />
+    <link rel="preload" as="image" href="Images/active-card-1.webp" />
+    <link rel="preload" as="image" href="Images/active-card-2.webp" />
+    <link
+      rel="preload"
+      as="image"
+      href="Images/Crunchyroll_Thumbnail_Mockup.webp"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="Images/Epic_Gains_Thumbnail_Mockup.webp"
+      fetchpriority="high"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script>
+  </head>
+  <body data-page="work">
+    <div class="nav-grid-header-shell" id="navbarShell">
+      <nav class="navbar" id="navbar">
+        <div class="nav-profile">
+          <div class="profile-img-wrapper">
+            <img
+              src="Images/Profile.webp"
+              alt="Harmanjeet Singh"
+              class="profile-img"
+            />
+            <span class="status-dot"></span>
+          </div>
+          <div class="profile-info">
+            <span class="profile-name">Harmanjeet Singh</span>
+            <span class="status-text">Open to work</span>
+          </div>
+        </div>
+
+        <div class="desktop-menu-wrapper">
+         <div class="nav-toggle-container">
+  <div class="active-indicator" id="activeIndicator">
+    <div class="blue-glow"></div>
+  </div>
+  <a class="toggle-btn active" href="index.html">Work</a>
+  <a class="toggle-btn" href="about.html">Info</a>
+</div>
+<script>
+  (function() {
+    var ind = document.getElementById('activeIndicator');
+    var btns = document.querySelectorAll('.nav-toggle-container .toggle-btn');
+    var active = document.querySelector('.nav-toggle-container .toggle-btn.active');
+    if (ind && btns.length > 0 && active) {
+      ind.style.transition = 'none';
+      ind.style.transform = 'translateX(' + (active.offsetLeft - btns[0].offsetLeft) + 'px)';
+      ind.style.width = active.offsetWidth + 'px';
+      ind.style.visibility = 'visible';
+    }
+  })();
+</script>
+        </div>
+
+        <button
+          class="resume-btn"
+          onclick="openResumeModal(event)"
+          style="border: none; cursor: pointer; font-family: inherit"
+        >
+          <div class="marquee-text-wrapper">
+            <span class="text-layer layer-primary">Resume</span>
+            <span class="text-layer layer-secondary" aria-hidden="true"
+              >Resume</span
+            >
+          </div>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </button>
+
+        <button
+          class="hamburger"
+          id="hamburgerBtn"
+          onclick="toggleMobileMenu()"
+        >
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+        </button>
+      </nav>
+    </div>
+    <div class="grid-lines-wrapper">
+      <div class="grid-line left-line"></div>
+      <div class="grid-line right-line"></div>
+    </div>
+
+    <section class="hero">
+      <div class="hero-content-wrapper">
+<h1 class="hero-heading">
+  Harmanjeet Singh is a UX Designer, <br class="desktop-br" />
+
+  <span class="selection-wrapper desktop-highlight">
+    <span class="selection-bg">
+      <span class="handle handle-right"></span>
+    </span>
+    <span class="handle handle-left"></span>
+    <span class="selection-text">making interfaces feel less like work</span>
+  </span>
+
+  <span class="selection-wrapper mobile-highlight">
+    <span class="selection-line line-1">
+      <span class="handle handle-left-mob"></span>
+      <span class="selection-bg bg-1"></span>
+      <span class="selection-text">making interfaces</span>
+    </span> <span class="selection-line line-2">
+      <span class="selection-bg bg-2">
+        <span class="handle handle-right-mob"></span>
+      </span>
+      <span class="selection-text">feel less like work</span>
+    </span>
+  </span>
+  <br class="desktop-br" />
+  and more like instinct <span class="sparkle">✦</span>
+</h1>
+      </div>
+    </section>
+
+    <div class="section-divider">
+      <div class="horizontal-line"></div>
+    </div>
+
+    <section class="case-studies" id="work">
+      <div class="section-header">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">Selected Case Studies</h2>
+          <svg
+            class="title-arrow"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="var(--blue-accent)"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </div>
+
+        <div class="view-controls">
+          <span class="view-label">View</span>
+          <button class="view-btn" id="listViewBtn" aria-label="List View">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="4" y1="6" x2="20" y2="6"></line>
+              <line x1="4" y1="12" x2="20" y2="12"></line>
+              <line x1="4" y1="18" x2="20" y2="18"></line>
+            </svg>
+          </button>
+          <button
+            class="view-btn active"
+            id="gridViewBtn"
+            aria-label="One Column View"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="case-studies-grid grid-view" id="caseStudiesContainer">
+        <div
+          class="case-card"
+          id="card-crunchyroll"
+          data-href="crunchyroll.html"
+          data-list-img="Images/1.webp"
+        >
+          <div class="case-card-bg grid-only"></div>
+          <div class="case-card-bg-hover grid-only"></div>
+
+          <div class="case-content">
+            <div class="case-number list-only">#1</div>
+
+            <div class="case-text">
+              <h3 class="case-title">
+                <span class="line-wrapper grid-only"
+                  ><span class="line-inner">Redesigning Crunchyroll</span></span
+                >
+                <span class="list-only">Crunchyroll</span>
+              </h3>
+              <p class="case-subtitle">
+                <span class="line-wrapper grid-only"
+                  ><span class="line-inner"
+                    >A UX case study restoring user control to the Crunchyroll
+                    app</span
+                  ></span
+                >
+                <span class="list-only">UX Design Case Study</span>
+              </p>
+            </div>
+
+            <div class="case-tags list-only">
+              <span class="tag">UX Research</span>
+              <span class="tag">UI Design</span>
+              <span class="tag">Interaction Design</span>
+              <span class="tag">Prototyping</span>
+            </div>
+
+            <div class="case-arrow grid-only">
+              <span class="line-wrapper">
+                <span class="line-inner">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+              </span>
+            </div>
+          </div>
+
+          <div class="case-mockup grid-only">
+            <img
+              src="Images/Crunchyroll_Thumbnail_Mockup.webp"
+              alt="Crunchyroll App Redesign Interface"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+
+        <div
+          class="case-card"
+          id="card-epic-gains"
+          data-href="epic-gains.html"
+          data-list-img="Images/2.webp"
+        >
+          <div class="case-card-bg grid-only"></div>
+          <div class="case-card-bg-hover grid-only"></div>
+
+          <div class="case-content">
+            <div class="case-number list-only">#2</div>
+
+            <div class="case-text">
+              <h3 class="case-title">
+                <span class="line-wrapper grid-only"
+                  ><span class="line-inner"
+                    >Epic Gains | Protothon 2026</span
+                  ></span
+                >
+                <span class="list-only">Epic Gains</span>
+              </h3>
+              <p class="case-subtitle">
+                <span class="line-wrapper grid-only"
+                  ><span class="line-inner"
+                    >Gamifying fitness to beat beginner gym anxiety</span
+                  ></span
+                >
+                <span class="list-only">Protothon 2026 (2nd Prize)</span>
+              </p>
+            </div>
+
+            <div class="case-tags list-only">
+              <span class="tag">Concept Development</span>
+              <span class="tag">UI/UX Design</span>
+              <span class="tag">Gamification</span>
+              <span class="tag">Rapid Prototyping</span>
+            </div>
+
+            <div class="case-arrow grid-only">
+              <span class="line-wrapper">
+                <span class="line-inner">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+              </span>
+            </div>
+          </div>
+
+          <div class="case-mockup grid-only">
+            <img
+              src="Images/Epic_Gains_Thumbnail_Mockup.webp"
+              alt="Epic Gains App Interface"
+              fetchpriority="high"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="section-divider">
+      <div class="horizontal-line"></div>
+    </div>
+    <section class="ui-explorations" id="explorations">
+      <div class="case-studies">
+        <div class="section-header">
+          <div class="section-title-wrapper">
+            <h2 class="section-title">UI Explorations</h2>
+            <svg class="title-arrow" viewBox="0 0 24 24" fill="none" stroke="var(--blue-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+        </div>
+
+        <div class="ui-grid">
+          <div class="ui-card">
+            <div class="ui-card-image-wrapper">
+              <img src="Images/ui-1.webp" alt="UI Exploration 1" loading="lazy" decoding="async" />
+            </div>
+            <div class="ui-card-info">
+              <h4 class="ui-card-title">Upload Interface</h4>
+              <p class="ui-card-subtitle">Component Design</p>
+            </div>
+          </div>
+          <div class="ui-card" id="ui-2">
+            <div class="ui-card-image-wrapper">
+              <img src="Images/ui-2.webp" alt="UI Exploration 2" loading="lazy" decoding="async" />
+            </div>
+            <div class="ui-card-info">
+              <h4 class="ui-card-title">Plan Selector</h4>
+              <p class="ui-card-subtitle">Component Design</p>
+            </div>
+          </div>
+          <div class="ui-card">
+            <div class="ui-card-image-wrapper">
+              <img src="Images/ui-3.webp" alt="UI Exploration 3" loading="lazy" decoding="async" />
+            </div>
+            <div class="ui-card-info">
+              <h4 class="ui-card-title">Checkout Page</h4>
+              <p class="ui-card-subtitle">Mobile App</p>
+            </div>
+          </div>
+          <div class="ui-card">
+            <div class="ui-card-image-wrapper">
+              <img src="Images/ui-4.webp" alt="UI Exploration 4" loading="lazy" decoding="async" />
+            </div>
+            <div class="ui-card-info">
+              <h4 class="ui-card-title">Quora+ Subscription Selector</h4>
+              <p class="ui-card-subtitle">Component Design</p>
+            </div>
+          </div>
+          <div class="ui-card">
+            <div class="ui-card-image-wrapper">
+              <img src="Images/ui-5.webp" alt="UI Exploration 5" loading="lazy" decoding="async" />
+            </div>
+            <div class="ui-card-info">
+              <h4 class="ui-card-title">Meditation App - Onboarding</h4>
+              <p class="ui-card-subtitle">Mobile App</p>
+            </div>
+          </div>
+           <div class="ui-card">
+            <div class="ui-card-image-wrapper">
+              <img src="Images/ui-6.webp" alt="UI Exploration 6" loading="lazy" decoding="async" />
+            </div>
+            <div class="ui-card-info">
+              <h4 class="ui-card-title">Dashboard Interface</h4>
+              <p class="ui-card-subtitle">Web App</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="mobile-overlay" id="mobileOverlay">
+      <a href="#work" class="mobile-link active" onclick="switchMobileTab(this)"
+        >Work</a
+      >
+      <a
+        href="about.html"
+        class="mobile-link"
+        onclick="
+          toggleMobileMenu();
+          window.triggerPageTransition
+            ? window.triggerPageTransition('about.html')
+            : (window.location.href = 'about.html');
+          return false;
+        "
+        >Info</a
+      >
+      <button
+        class="mobile-resume-btn"
+        onclick="
+          toggleMobileMenu();
+          openResumeModal(event);
+        "
+        style="border: none; cursor: pointer; font-family: inherit"
+      >
+        Resume
+      </button>
+    </div>
+
+    <div id="resumeModal" class="modal-overlay">
+      <div class="glass-modal-container">
+        <div class="modal-header-bar">
+          <span class="modal-header-title">Resume.pdf</span>
+          <div class="modal-header-actions floating-actions">
+            <a href="Resume.pdf" download="Harmanjeet_Singh_Resume.pdf" class="floating-btn" title="Download PDF">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </a>
+            <button class="floating-btn close-btn" onclick="closeResumeModal()" aria-label="Close modal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="glass-modal-body">
+          <iframe src="Resume.pdf" class="resume-iframe desktop-resume" title="Harmanjeet Singh Resume"></iframe>
+          <div class="mobile-resume-wrapper">
+            <img src="Images/Resume_IMG.png" alt="Harmanjeet Singh Resume" class="mobile-resume-img" />
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="uiViewerModal" class="modal-overlay">
+      <div class="glass-modal-container ui-viewer-container">
+        <div class="modal-header-bar">
+          <span class="modal-header-title" id="uiViewerTitle">UI Explorations</span>
+          <div class="modal-header-actions floating-actions">
+            <button class="floating-btn close-btn" onclick="closeUiViewerModal()" aria-label="Close modal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="glass-modal-body ui-viewer-body">
+          <button class="ui-nav-btn left-btn" onclick="prevUiImage()" aria-label="Previous image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <img id="uiViewerImg" src="" alt="UI Viewer" />
+          <button class="ui-nav-btn right-btn" onclick="nextUiImage()" aria-label="Next image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+          <div class="ui-counter" id="uiCounter"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+<footer class="footer" id="contact">
+  <div class="section-divider"><div class="horizontal-line"></div></div>
+  
+  <div class="footer-content">
+    <canvas id="footer-glcanvas"></canvas>
+
+    <div class="footer-left">
+      <h2 class="footer-heading">Have a Cool Idea?<br />Let's Collaborate</h2>
+    </div>
+
+      <div class="footer-right">
+        <div class="contact-col">
+          <p class="label">Location</p>
+          <p class="value">Punjab, India</p>
+          <p class="label" style="margin-top: 24px">Contact</p>
+
+          <p class="value">
+            <span
+              class="copy-click"
+              data-copy="+91 836-027-4066"
+              data-tooltip="Click to copy"
+              >+91 836-027-4066</span
+            >
+          </p>
+          <p class="value">
+            <span
+              class="copy-click"
+              data-copy="harmanjeet.singh.ux@proton.me"
+              data-tooltip="Click to copy"
+              >harmanjeet.singh.ux@proton.me</span
+            >
+          </p>
+        </div>
+
+     <div class="social-col">
+            <p class="label">Socials</p>
+            <div class="links-grid">
+              <a href="https://www.behance.net/harmanjeetsingh25" target="_blank" rel="noopener noreferrer" class="social-btn">
+                <img src="Images/behance-icon.svg" class="social-logo" alt="Behance" /> Behance
+              </a>
+              <a href="https://www.linkedin.com/in/harmanjeet-singh-52892824a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="social-btn">
+                <img src="Images/linkedin-icon.svg" class="social-logo" alt="LinkedIn" /> LinkedIn
+              </a>
+              <a href="https://medium.com/@theharmonicone" target="_blank" rel="noopener noreferrer" class="social-btn">
+                <img src="Images/medium-icon.svg" class="social-logo" alt="Medium" /> Medium
+              </a>
+              <a href="https://www.instagram.com/theharmonicone/" target="_blank" rel="noopener noreferrer" class="social-btn">
+                <img src="Images/insta-icon.svg" class="social-logo" alt="Instagram" /> Instagram
+              </a>
+            </div>
+          </div>
+
+        <div class="links-col">
+          <p class="label">Links</p>
+          <a href="#work" class="link">Work</a>
+          <a href="#about" class="link">Info</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider">
+      <div class="horizontal-line"></div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <p class="footer-credit">Designed By</p>
+        <div class="footer-brand">
+          <img src="Images/emoji.webp" alt="Emoji" class="footer-icon" />
+          <img
+            src="Images/Initials.svg"
+            alt="Initials"
+            class="footer-initials-img"
+          />
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="transitions.js"></script>
+  <script src="script.js"></script>
+</html>

@@ -1,0 +1,77 @@
+#navbarShell {
+  z-index: 1200 !important;
+  will-change: auto;
+ 
+  isolation: isolate;
+}
+
+
+
+#cs-toc {
+  z-index: 1050 !important;
+  will-change: opacity;
+  isolation: isolate;
+}
+
+
+#cs-progress {
+  z-index: 1200 !important;
+  will-change: auto;
+  isolation: isolate;
+}
+
+
+main,
+#_pt-content-wrap {
+  will-change: transform, opacity;
+  transform-origin: top center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+
+#_pt-curtain {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 9998 !important;
+  pointer-events: none !important;
+  background: var(--bg-canvas, #111111) !important;
+}
+
+
+.case-card {
+  transition: transform 0.18s cubic-bezier(0.25, 1, 0.5, 1),
+              opacity 0.18s ease;
+}
+.case-card:active {
+  transform: scale(0.985) !important;
+}
+
+
+
+html {
+  scrollbar-gutter: stable !important;
+}
+
+
+
+.nav-profile,
+.nav-toggle-container,
+.resume-btn,
+.hamburger,
+.cs-back-btn,
+.cs-nav-title {
+  will-change: opacity;
+}
+
+
+.profile-img-wrapper {
+  backface-visibility: hidden;
+}
+
+
+
+body[style*="overflow: hidden"] {
+  overflow: hidden !important;
+}
